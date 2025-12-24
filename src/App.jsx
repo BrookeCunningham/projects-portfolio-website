@@ -4,31 +4,57 @@ function App() {
   const [activeSection, setActiveSection] = useState('work')
 
   const projects = [
+    // Networking Projects
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack online shopping platform with user authentication, product catalog, and checkout system.",
-      tech: "React, Node.js, MongoDB, Stripe",
+      title: "Network Traffic Analyzer",
+      description: "Real-time network packet analysis tool with protocol detection, bandwidth monitoring, and traffic visualization.",
+      tech: "Python, Scapy, Wireshark, Socket Programming",
       github: "#",
       demo: "#"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task manager with real-time updates, drag-and-drop interface, and team features.",
-      tech: "Next.js, PostgreSQL, WebSockets",
+      title: "Load Balancer Simulator",
+      description: "Custom HTTP load balancer implementing round-robin and least-connections algorithms for distributed web traffic.",
+      tech: "Python, Flask, Docker, Nginx",
       github: "#",
       demo: "#"
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather application with location search, 7-day forecasts, and interactive maps.",
-      tech: "React, OpenWeather API, Chart.js",
+      title: "Network Topology Mapper",
+      description: "Automated network discovery and visualization tool that maps device connections and network infrastructure.",
+      tech: "Python, NetworkX, D3.js, SNMP",
+      github: "#",
+      demo: "#"
+    },
+    
+    // Cybersecurity Projects
+    {
+      title: "Vulnerability Scanner",
+      description: "Web application security scanner that detects common vulnerabilities like SQL injection, XSS, and CSRF attacks.",
+      tech: "Python, BeautifulSoup, Requests, SQLMap",
       github: "#",
       demo: "#"
     },
     {
-      title: "Portfolio Generator",
-      description: "Dynamic portfolio builder allowing users to create and customize their developer portfolios.",
-      tech: "Next.js, Tailwind CSS, MDX",
+      title: "Password Strength Analyzer",
+      description: "Tool for evaluating password security using entropy calculations, dictionary attacks, and breach database checks.",
+      tech: "Python, HashCat, Have I Been Pwned API",
+      github: "#",
+      demo: "#"
+    },
+    
+    // Economics Projects
+    {
+      title: "Stock Market Predictor",
+      description: "Machine learning model for analyzing stock trends and predicting price movements using historical market data.",
+      tech: "Python, TensorFlow, Pandas, Alpha Vantage API",
+      github: "#",
+      demo: "#"
+    },
+    {
+      title: "Economic Data Dashboard",
+      description: "Interactive visualization platform for macroeconomic indicators including GDP, inflation, and unemployment rates.",
+      tech: "React, D3.js, Python, Federal Reserve API",
       github: "#",
       demo: "#"
     }
@@ -84,8 +110,8 @@ function App() {
         <div className="container">
           <h2>Computer Science<br />Student & Developer</h2>
           <p>
-            Building web applications and learning every day. Currently in my second year, 
-            passionate about creating elegant solutions to complex problems.
+          Second year Computer Science student at Durham University. Specialising in backend development, 
+          network security, and financial technology.
           </p>
         </div>
       </section>
@@ -120,53 +146,70 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
-      <section id="about" className="about">
+<section id="about" className="about">
         <div className="container">
           <div className="about-grid">
-            <div>
-              <h2>Hi 👋</h2>
-              <p>
-                I'm a second year Computer Science student with a passion for full-stack 
-                development and creating meaningful digital experiences.
-              </p>
-              <p>
-                Currently expanding my skillset with Next.js and modern web technologies. 
-                I believe in writing clean, maintainable code and building applications 
-                that solve real problems.
-              </p>
-            </div>
-            <div>
-              <h3>Tech Stack</h3>
-              <div className="tech-stack">
-                <div className="tech-category">
-                  <h4>Languages</h4>
-                  <p>Python, Java, JavaScript, HTML/CSS</p>
-                </div>
-                <div className="tech-category">
-                  <h4>Frontend</h4>
-                  <p>React, Next.js, Tailwind CSS</p>
-                </div>
-                <div className="tech-category">
-                  <h4>Backend</h4>
-                  <p>Node.js, Express, MongoDB, PostgreSQL</p>
-                </div>
-                <div className="tech-category">
-                  <h4>Tools</h4>
-                  <p>Git, VS Code, Figma, Docker</p>
-                </div>
+          <div>
+            <h2>About Me</h2>
+            <p>
+              I'm in my second year of an MEng Computer Science degree at Durham University, 
+              originally from Belfast where I achieved A*A*A in Maths, Physics, and Software 
+              Systems Development at A-Level.
+            </p>
+            <p>
+              Through my degree, I've built projects ranging from Python client-server messaging 
+              systems and custom C memory allocators to penetration testing Linux systems in CTF 
+              challenges. I'm particularly drawn to where finance meets technology—I've completed 
+              Bloomberg financial market courses and I'm currently developing a Python tool for 
+              processing and analyzing large-scale financial datasets.
+            </p>
+            <p>
+              Outside of tech, I play for Durham University Women's Football Club 3rd Team and 
+              I'm training for my first marathon.
+            </p>
+          </div>
+
+          <div>
+            <h3>Tech Stack</h3>
+            <div className="tech-stack">
+
+              <div className="tech-category">
+                <h4>Languages</h4>
+                <p>Python, Java, C, C#, JavaScript, TypeScript, HTML/CSS, SQL</p>
               </div>
+
+              <div className="tech-category">
+                <h4>Frameworks & Tools</h4>
+                <p>React, Node.js, Express, SQL Server, SQLite</p>
+              </div>
+
+              <div className="tech-category">
+                <h4>Development Tools</h4>
+                <p>Git, GitHub, VS Code, Visual Studio, Linux, PowerShell, Figma</p>
+              </div>
+
+              <div className="tech-category">
+                <h4>Technical Skills</h4>
+                <p>Debugging, Agile/Scrum, Project Management, Technical Documentation, Problem-Solving</p>
+              </div>
+
+              <div className="tech-category">
+                <h4>Soft Skills</h4>
+                <p>Team Collaboration, Communication, Leadership, Adaptability, Critical Thinking</p>
+              </div>
+
             </div>
+          </div>
           </div>
         </div>
       </section>
+      {/* About Section */}
+      
 
       {/* Contact Section */}
       <section id="contact" className="contact">
         <div className="container">
           <h2>Let's Connect</h2>
-          <p>Always open to discussing new opportunities and collaborations.</p>
           <div className="contact-links">
             <a href="mailto:brooke.cunningham@outlook.com" className="contact-link">
               brooke.cunningham@outlook.com
