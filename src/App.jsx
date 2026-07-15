@@ -179,7 +179,8 @@ function App() {
 
                 <div className="tech-category">
                   <h4>Certifications</h4>
-                  <p>Bloomberg Market Concepts (BMC)
+                  <p>Bloomberg Market Concepts (BMC)<br></br>
+                    
                     Bloomberg Finance Fundementals (BFF)</p>
                 </div>
 
