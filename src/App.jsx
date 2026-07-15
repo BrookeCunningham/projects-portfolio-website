@@ -32,7 +32,7 @@ function App() {
       "Node.js, Express, JWT, TypeScript, JavaScript, HTML, CSS",
     github: "",
     demo: "",
-    image: null
+    image: '/ehs.png'
   }
 ]
 
