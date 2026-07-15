@@ -29,10 +29,4 @@ const projects = [
   }
 ]
 
-## Deployment
 
-Deployed via Vercel — push to main and it builds automatically.
-
-To deploy your own fork:
-1. Import the repo at vercel.com
-2. No configuration needed, Vite is detected automatically
