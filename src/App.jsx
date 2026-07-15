@@ -4,59 +4,33 @@ function App() {
   const [activeSection, setActiveSection] = useState('work')
 
   const projects = [
-    // Networking Projects
     {
-      title: "Network Traffic Analyzer",
-      description: "Real-time network packet analysis tool with protocol detection, bandwidth monitoring, and traffic visualization.",
-      tech: "Python, Scapy, Wireshark, Socket Programming",
-      github: "#",
-      demo: "#"
+      title: "Fintrak",
+      description: "Full-stack personal finance tracker with JWT authentication, transaction management, and custom monthly budgets. Includes a Monthly Insights dashboard that aggregates spending by category and shows month-over-month change, plus Plaid API integration for secure bank account linking and transaction sync.",
+      tech: "React, TypeScript, Vite, MUI, Recharts, Node.js, Express, Prisma, PostgreSQL, JWT, Plaid API",
+      github: "https://github.com/BrookeCunningham",
+      demo: ""
     },
     {
-      title: "Load Balancer Simulator",
-      description: "Custom HTTP load balancer implementing round-robin and least-connections algorithms for distributed web traffic.",
-      tech: "Python, Flask, Docker, Nginx",
-      github: "#",
-      demo: "#"
+      title: "Papertrak",
+      description: "Paper trading simulator modelled on the Investopedia Stock Simulator. Users get a £10,000 virtual balance to trade S&P 500 equities, with portfolio performance benchmarked against the index over the same holding period. Currently in development.",
+      tech: "React, TypeScript, Vite, MUI, Recharts, Python, FastAPI, SQLAlchemy, PostgreSQL, yfinance, JWT",
+      github: "https://github.com/BrookeCunningham",
+      demo: ""
     },
     {
-      title: "Network Topology Mapper",
-      description: "Automated network discovery and visualization tool that maps device connections and network infrastructure.",
-      tech: "Python, NetworkX, D3.js, SNMP",
-      github: "#",
-      demo: "#"
-    },
-    
-    // Cybersecurity Projects
-    {
-      title: "Vulnerability Scanner",
-      description: "Web application security scanner that detects common vulnerabilities like SQL injection, XSS, and CSRF attacks.",
-      tech: "Python, BeautifulSoup, Requests, SQLMap",
-      github: "#",
-      demo: "#"
+      title: "Duty Feed",
+      description: "Group project for a second-year Software Engineering module. Built for Elemore Hall School (a special educational needs school) to replace a paper-and-walkie-talkie workflow used to track pupils, locations, and incidents. Role-based access across Admin, Duty Coordinator, and Staff Member accounts. I contributed to backend controllers and routes, focusing on student location management and note-taking features.",
+      tech: "Node.js, Express, JWT, TypeScript, JavaScript, HTML, CSS",
+      github: "",
+      demo: ""
     },
     {
-      title: "Password Strength Analyzer",
-      description: "Tool for evaluating password security using entropy calculations, dictionary attacks, and breach database checks.",
-      tech: "Python, HashCat, Have I Been Pwned API",
-      github: "#",
-      demo: "#"
-    },
-    
-    // Economics Projects
-    {
-      title: "Stock Market Predictor",
-      description: "Machine learning model for analyzing stock trends and predicting price movements using historical market data.",
-      tech: "Python, TensorFlow, Pandas, Alpha Vantage API",
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Economic Data Dashboard",
-      description: "Interactive visualization platform for macroeconomic indicators including GDP, inflation, and unemployment rates.",
-      tech: "React, D3.js, Python, Federal Reserve API",
-      github: "#",
-      demo: "#"
+      title: "Notes App",
+      description: "Full-stack notes application with create, edit, and delete functionality, JWT authentication, and PostgreSQL persistence. First deployed full-stack project.",
+      tech: "React, TypeScript, Node.js, Express, Prisma, PostgreSQL",
+      github: "https://github.com/BrookeCunningham",
+      demo: ""
     }
   ]
 
@@ -110,8 +84,8 @@ function App() {
         <div className="container">
           <h2>Computer Science<br />Student & Developer</h2>
           <p>
-          Second year Computer Science student at Durham University. Specialising in backend development, 
-          network security, and financial technology.
+            Second-year MEng Computer Science student at Durham University,
+            building full-stack applications with a focus on fintech.
           </p>
         </div>
       </section>
@@ -128,7 +102,7 @@ function App() {
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <span className="project-label">Project Screenshot</span>
+                  <span className="project-label">Screenshot coming soon</span>
                 </div>
                 
                 {/* Content */}
@@ -137,8 +111,26 @@ function App() {
                   <p>{project.description}</p>
                   <p className="project-tech">{project.tech}</p>
                   <div className="project-links">
-                    <a href={project.github} className="project-link">GitHub →</a>
-                    <a href={project.demo} className="project-link">Live Demo →</a>
+                    {project.github && (
+                      <a 
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        GitHub →
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a 
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        Live Demo →
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -146,65 +138,62 @@ function App() {
           </div>
         </div>
       </section>
-<section id="about" className="about">
+
+      {/* About Section */}
+      <section id="about" className="about">
         <div className="container">
           <div className="about-grid">
-          <div>
-            <h2>About Me</h2>
-            <p>
-              I'm in my second year of an MEng Computer Science degree at Durham University, 
-              originally from Belfast where I achieved A*A*A in Maths, Physics, and Software 
-              Systems Development at A-Level.
-            </p>
-            <p>
-              Through my degree, I've built projects ranging from Python client-server messaging 
-              systems and custom C memory allocators to penetration testing Linux systems in CTF 
-              challenges. I'm particularly drawn to where finance meets technology—I've completed 
-              Bloomberg financial market courses and I'm currently developing a Python tool for 
-              processing and analyzing large-scale financial datasets.
-            </p>
-            <p>
-              Outside of tech, I play for Durham University Women's Football Club 3rd Team and 
-              I'm training for my first marathon.
-            </p>
-          </div>
-
-          <div>
-            <h3>Tech Stack</h3>
-            <div className="tech-stack">
-
-              <div className="tech-category">
-                <h4>Languages</h4>
-                <p>Python, Java, C, C#, JavaScript, TypeScript, HTML/CSS, SQL</p>
-              </div>
-
-              <div className="tech-category">
-                <h4>Frameworks & Tools</h4>
-                <p>React, Node.js, Express, SQL Server, SQLite</p>
-              </div>
-
-              <div className="tech-category">
-                <h4>Development Tools</h4>
-                <p>Git, GitHub, VS Code, Visual Studio, Linux, PowerShell, Figma</p>
-              </div>
-
-              <div className="tech-category">
-                <h4>Technical Skills</h4>
-                <p>Debugging, Agile/Scrum, Project Management, Technical Documentation, Problem-Solving</p>
-              </div>
-
-              <div className="tech-category">
-                <h4>Soft Skills</h4>
-                <p>Team Collaboration, Communication, Leadership, Adaptability, Critical Thinking</p>
-              </div>
-
+            <div>
+              <h2>About Me</h2>
+              <p>
+                I'm in my second year of an MEng Computer Science degree at Durham 
+                University, currently on a 2:1 (Year 1: 67, Year 2: 68). I grew up in 
+                Northern Ireland and completed A-Levels in Maths, Physics, and Software 
+                Systems Development at Friends School Lisburn, achieving A*A*A.
+              </p>
+              <p>
+                I'm particularly interested in where finance meets technology. I've 
+                completed the Bloomberg Market Concepts certification and I'm currently 
+                building out a portfolio of fintech projects — a personal finance tracker 
+                with Plaid API integration, and a paper trading simulator that benchmarks 
+                user portfolios against the S&P 500.
+              </p>
+              <p>
+                Outside of tech, I play football for Van Mildert AFC (where I'm Women's 
+                Club President) and Durham University Women's Athletic Football Club 
+                (where I'm Kit Secretary).
+              </p>
             </div>
-          </div>
+
+            <div>
+              <h3>Tech Stack</h3>
+              <div className="tech-stack">
+
+                <div className="tech-category">
+                  <h4>Languages</h4>
+                  <p>Java, Python, TypeScript, JavaScript, SQL, HTML/CSS</p>
+                </div>
+
+                <div className="tech-category">
+                  <h4>Frameworks & Libraries</h4>
+                  <p>React, Node.js, Express, FastAPI, MUI, Recharts</p>
+                </div>
+
+                <div className="tech-category">
+                  <h4>Tools & Platforms</h4>
+                  <p>Git, GitHub, Prisma, SQLAlchemy, PostgreSQL, Vercel, Render, VS Code</p>
+                </div>
+
+                <div className="tech-category">
+                  <h4>Certifications</h4>
+                  <p>Bloomberg Market Concepts (BMC)</p>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      {/* About Section */}
-      
 
       {/* Contact Section */}
       <section id="contact" className="contact">
@@ -239,7 +228,7 @@ function App() {
       {/* Footer */}
       <footer>
         <div className="footer-container">
-          <p>© 2024 Brooke Cunningham</p>
+          <p>© 2026 Brooke Cunningham</p>
           <p>Built with React</p>
         </div>
       </footer>
