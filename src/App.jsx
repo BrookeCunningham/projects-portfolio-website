@@ -4,28 +4,37 @@ function App() {
   const [activeSection, setActiveSection] = useState('work')
 
   const projects = [
-    {
-      title: "Fintrak",
-      description: "Full-stack personal finance tracker with JWT authentication, transaction management, and custom monthly budgets. Includes a Monthly Insights dashboard that aggregates spending by category and shows month-over-month change, plus Plaid API integration for secure bank account linking and transaction sync.",
-      tech: "React, TypeScript, Vite, MUI, Recharts, Node.js, Express, Prisma, PostgreSQL, JWT, Plaid API",
-      github: "https://github.com/BrookeCunningham/finance-tracker",
-      demo: "https://finance-tracker-tau-orcin.vercel.app/login"
-    },
-    {
-      title: "Papertrak",
-      description: "Paper trading simulator modelled on the Investopedia Stock Simulator. Users get a £10,000 virtual balance to trade S&P 500 equities, with portfolio performance benchmarked against the index over the same holding period. Currently in development.",
-      tech: "React, TypeScript, Vite, MUI, Recharts, Python, FastAPI, SQLAlchemy, PostgreSQL, yfinance, JWT",
-      github: "https://github.com/BrookeCunningham/investment-simulator",
-      demo: ""
-    },
-    {
-      title: "School Admin Application",
-      description: "Group project for a second-year Software Engineering module. Built for Elemore Hall School (a special educational needs school) to replace a paper-and-walkie-talkie workflow used to track pupils, locations, and incidents. Role-based access across Admin, Duty Coordinator, and Staff Member accounts. I contributed to backend controllers and routes, focusing on student location management and note-taking features.",
-      tech: "Node.js, Express, JWT, TypeScript, JavaScript, HTML, CSS",
-      github: "",
-      demo: ""
-    },
-  ]
+  {
+    title: "Fintrak",
+    description:
+      "Full-stack personal finance tracker with JWT authentication, transaction management, and custom monthly budgets. Includes a Monthly Insights dashboard that aggregates spending by category and shows month-over-month change, plus Plaid API integration for secure bank account linking and transaction sync.",
+    tech:
+      "React, TypeScript, Vite, MUI, Recharts, Node.js, Express, Prisma, PostgreSQL, JWT, Plaid API",
+    github: "https://github.com/BrookeCunningham/finance-tracker",
+    demo: "https://finance-tracker-tau-orcin.vercel.app/login",
+    image: "/fintrak.png"
+  },
+  {
+    title: "Papertrak",
+    description:
+      "Paper trading simulator modelled on the Investopedia Stock Simulator. Users get a £10,000 virtual balance to trade S&P 500 equities, with portfolio performance benchmarked against the index over the same holding period. Currently in development.",
+    tech:
+      "React, TypeScript, Vite, MUI, Recharts, Python, FastAPI, SQLAlchemy, PostgreSQL, yfinance, JWT",
+    github: "https://github.com/BrookeCunningham/investment-simulator",
+    demo: "",
+    image: null
+  },
+  {
+    title: "School Admin Application",
+    description:
+      "Group project for a second-year Software Engineering module. Built for Elemore Hall School to replace a paper workflow used to track pupils, locations, and incidents.",
+    tech:
+      "Node.js, Express, JWT, TypeScript, JavaScript, HTML, CSS",
+    github: "",
+    demo: "",
+    image: null
+  }
+]
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId)
@@ -92,8 +101,29 @@ function App() {
               <div key={index} className="project-card">
                 {/* Placeholder Image */}
                 <div className="project-image">
-                  <img src="/fintrack.png" alt="FinTrack dashboard" />
-                </div>
+                {project.image ? (
+                  <img 
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="project-screenshot"
+                  />
+                ) : (
+                  <>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+
+                    <span className="project-label">
+                      Screenshot coming soon
+                    </span>
+                  </>
+                )}
+              </div>
                 
                 {/* Content */}
                 <div className="project-content">
