@@ -9,7 +9,7 @@ function App() {
       description: "Full-stack personal finance tracker with JWT authentication, transaction management, and custom monthly budgets. Includes a Monthly Insights dashboard that aggregates spending by category and shows month-over-month change, plus Plaid API integration for secure bank account linking and transaction sync.",
       tech: "React, TypeScript, Vite, MUI, Recharts, Node.js, Express, Prisma, PostgreSQL, JWT, Plaid API",
       github: "https://github.com/BrookeCunningham/finance-tracker",
-      demo: ""
+      demo: "https://finance-tracker-tau-orcin.vercel.app/login"
     },
     {
       title: "Papertrak",
@@ -92,11 +92,21 @@ function App() {
               <div key={index} className="project-card">
                 {/* Placeholder Image */}
                 <div className="project-image">
+                {imageExists ? (
+                  <img src="/fintrack.png" alt="FinTrack dashboard" />
+                ) : (
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
                   </svg>
-                  <span className="project-label">Screenshot coming soon</span>
-                </div>
+                )}
+
+                <span className="project-label">Screenshot coming soon</span>
+              </div>
                 
                 {/* Content */}
                 <div className="project-content">
