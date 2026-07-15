@@ -8,30 +8,23 @@ function App() {
       title: "Fintrak",
       description: "Full-stack personal finance tracker with JWT authentication, transaction management, and custom monthly budgets. Includes a Monthly Insights dashboard that aggregates spending by category and shows month-over-month change, plus Plaid API integration for secure bank account linking and transaction sync.",
       tech: "React, TypeScript, Vite, MUI, Recharts, Node.js, Express, Prisma, PostgreSQL, JWT, Plaid API",
-      github: "https://github.com/BrookeCunningham",
+      github: "https://github.com/BrookeCunningham/finance-tracker",
       demo: ""
     },
     {
       title: "Papertrak",
       description: "Paper trading simulator modelled on the Investopedia Stock Simulator. Users get a £10,000 virtual balance to trade S&P 500 equities, with portfolio performance benchmarked against the index over the same holding period. Currently in development.",
       tech: "React, TypeScript, Vite, MUI, Recharts, Python, FastAPI, SQLAlchemy, PostgreSQL, yfinance, JWT",
-      github: "https://github.com/BrookeCunningham",
+      github: "https://github.com/BrookeCunningham/investment-simulator",
       demo: ""
     },
     {
-      title: "Duty Feed",
+      title: "School Admin Application",
       description: "Group project for a second-year Software Engineering module. Built for Elemore Hall School (a special educational needs school) to replace a paper-and-walkie-talkie workflow used to track pupils, locations, and incidents. Role-based access across Admin, Duty Coordinator, and Staff Member accounts. I contributed to backend controllers and routes, focusing on student location management and note-taking features.",
       tech: "Node.js, Express, JWT, TypeScript, JavaScript, HTML, CSS",
       github: "",
       demo: ""
     },
-    {
-      title: "Notes App",
-      description: "Full-stack notes application with create, edit, and delete functionality, JWT authentication, and PostgreSQL persistence. First deployed full-stack project.",
-      tech: "React, TypeScript, Node.js, Express, Prisma, PostgreSQL",
-      github: "https://github.com/BrookeCunningham",
-      demo: ""
-    }
   ]
 
   const scrollToSection = (sectionId) => {
